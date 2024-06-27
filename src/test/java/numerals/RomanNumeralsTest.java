@@ -1,7 +1,7 @@
-package src.test.java.numerals;
+package numerals;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class RomanNumeralsTest {
 
@@ -11,12 +11,12 @@ public class RomanNumeralsTest {
     }
 
     @Test
-    public void testComplexNumber() {
-        assertThat(RomanNumerals.toRoman(7)).isEqualTo("VII");
+    public void testTens() {
+        assertThat(RomanNumerals.toRoman(10)).isEqualTo("X");
     }
 
     @Test
-    public void testTens() {
-        assertThat(RomanNumerals.toRoman(10)).isEqualTo("X");
+    public void testComplexNumber() {
+        assertThat(RomanNumerals.toRoman(7)).isEqualTo("VII");
     }
 }
