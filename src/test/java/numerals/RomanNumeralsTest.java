@@ -11,12 +11,12 @@ public class RomanNumeralsTest {
     }
 
     @Test
-    public void testComplexNumber() {
+    public void testComplexNumber_2() {
         assertThat(RomanNumerals.toRoman(2)).isEqualTo("II");
     }
 
     @Test
-    public void testComplexNumber() {
+    public void testComplexNumber_7() {
         assertThat(RomanNumerals.toRoman(7)).isEqualTo("VII");
     }
 
