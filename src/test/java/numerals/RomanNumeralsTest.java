@@ -31,5 +31,11 @@ public class RomanNumeralsTest {
         assertThat(RomanNumerals.toRoman(2000)).isEqualTo("MM");
         assertThat(RomanNumerals.toRoman(3000)).isEqualTo("MMM");
     }
+
+    // @Test
+    // public void testNegativeNumber() {
+    //     assertThat(RomanNumerals.toRoman(-1)).isEqualTo("Negative"); // Ce test devrait échouer
+    // }
+
 }
 
