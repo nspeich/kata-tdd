@@ -24,4 +24,12 @@ public class RomanNumeralsTest {
     public void testTens() {
         assertThat(RomanNumerals.toRoman(10)).isEqualTo("X");
     }
+
+    @Test
+    public void testThousands() {
+        assertThat(RomanNumerals.toRoman(1000)).isEqualTo("M");
+        assertThat(RomanNumerals.toRoman(2000)).isEqualTo("MM");
+        assertThat(RomanNumerals.toRoman(3000)).isEqualTo("MMM");
+    }
 }
+
