@@ -1,5 +1,24 @@
+package numerals;
+
+public class RomanNumerals {
+    public static String toRoman(int number) {
+        if (number < 1 || number > 3000) {
+            throw new IllegalArgumentException("Number out of range (1-3000)");
+        }
+
+        String[] thousands = {"", "M", "MM", "MMM"};
+        String[] hundreds = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
+        String[] tens = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+        String[] units = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+
+        return thousands[number / 1000] +
+               hundreds[(number % 1000) / 100] +
+               tens[(number % 100) / 10] +
+               units[number % 10];
+    }
+}
+
 // public class RomanNumerals {
-    
 //     public static String toRoman(int num) {
 //         int[] values = {10, 9, 5, 4, 1};
 //         String[] symbols = {"X", "IX", "V", "IV", "I"};
@@ -21,23 +40,3 @@
 //         }
 //     }
 // }
-
-package numerals;
-
-public class RomanNumerals {
-    public static String toRoman(int number) {
-        if (number < 1 || number > 3000) {
-            throw new IllegalArgumentException("Number out of range (1-3000)");
-        }
-
-        String[] thousands = {"", "M", "MM", "MMM"};
-        String[] hundreds = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
-        String[] tens = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
-        String[] units = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
-
-        return thousands[number / 1000] +
-               hundreds[(number % 1000) / 100] +
-               tens[(number % 100) / 10] +
-               units[number % 10];
-    }
-}
